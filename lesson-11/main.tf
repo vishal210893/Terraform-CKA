@@ -1,16 +1,14 @@
 ## PUT TERRAFORM CLOUD BLOCK HERE!  ##
 
 terraform {
-  
-  
-  
+
+
   required_providers {
     aws = {
       source  = "hashicorp/aws"
       version = "~> 5.01"
     }
   }
-
 
 
 }

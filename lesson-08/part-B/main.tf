@@ -38,13 +38,13 @@ module "ec2_instances" {
   source  = "terraform-aws-modules/ec2-instance/aws"
   version = "5.0.0"
 
-  name           = "Cluster-A-${count.index}"
+  name  = "Cluster-A-${count.index}"
   count = 3
 
-  ami                    = "ami-097a2df4ac947655f"
-  instance_type          = "t2.micro"
+  ami           = "ami-097a2df4ac947655f"
+  instance_type = "t2.micro"
   vpc_security_group_ids = [module.vpc.default_security_group_id]
-  subnet_id              = module.vpc.public_subnets[0]
+  subnet_id     = module.vpc.public_subnets[0]
 
   tags = {
     Terraform   = "true"
